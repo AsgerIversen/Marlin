@@ -206,7 +206,7 @@
 // When first starting the main fan, run it at full speed for the
 // given number of milliseconds.  This gets the fan spinning reliably
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
-//#define FAN_KICKSTART_TIME 100
+#define FAN_KICKSTART_TIME 1500
 
 /**
  * PWM Fan Scaling
@@ -237,7 +237,7 @@
  * Multiple extruders can be assigned to the same pin in which case
  * the fan will turn on when any selected extruder is above the threshold.
  */
-#define E0_AUTO_FAN_PIN FAN1_PIN
+#define E0_AUTO_FAN_PIN 6 // FAN_PIN was 8 in pins.h
 #define E1_AUTO_FAN_PIN -1
 #define E2_AUTO_FAN_PIN -1
 #define E3_AUTO_FAN_PIN -1
@@ -253,7 +253,7 @@
  * The multiplexer is automatically switched at tool-change.
  * Set FANMUX[012]_PINs below for up to 2, 4, or 8 multiplexed fans.
  */
-#define FANMUX0_PIN -1
+#define FANMUX0_PIN 8
 #define FANMUX1_PIN -1
 #define FANMUX2_PIN -1
 
